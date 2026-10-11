@@ -23,7 +23,7 @@ cp /var/db/xbps/keys/* /mnt/var/db/xbps/keys/
 echo "done\n"
 
 echo "Installing base system and packages..."
-xbps-install -Sy -R https://repo-default.voidlinux.org/current -r /mnt base-system cryptsetup limine emacs xorg git ibm-plex-font-ttf NetworkManager seatd turnstile
+xbps-install -Sy -R https://repo-default.voidlinux.org/current -r /mnt base-system cryptsetup limine emacs xorg git font-ibm-plex-ttf NetworkManager seatd turnstile
 echo "done\n"
 
 echo "Generating fstab..."
