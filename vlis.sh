@@ -18,7 +18,7 @@ mount /dev/nvme0n1p1 /mnt/boot
 echo "done\n"
 
 echo "Copying keys for installation..."
-mkdir /mnt/var/db/xbps/keys
+mkdir -p /mnt/var/db/xbps/keys
 cp /var/db/xbps/keys/* /mnt/var/db/xbps/keys/
 echo "done\n"
 
