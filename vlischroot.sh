@@ -19,7 +19,7 @@ echo " done\n"
 echo "Configuring limine bootloader..."
 mkdir -p boot/EFI/BOOT
 cp /usr/share/limine/BOOTX64.EFI boot/EFI/BOOT/
-uuid=$(blkid -s UUID -o value /dev/nvme0n1p2 > boot/EFI/BOOT/limine.conf)
+uuid=$(blkid -s UUID -o value /dev/nvme0n1p2)
 cat > boot/EFI/BOOT/limine.conf <<EOF
 timeout: 5
 
@@ -27,9 +27,9 @@ timeout: 5
     protocol: linux
     kernel_path: boot():/vmlinuz-6.18.55_1
     module_path: boot():/initramfs-6.18.55_1.img
-    cmdline: root/dev/mapper/luks-$uuid rd.luks.uuid=$uuid rw
+    cmdline: root=/dev/mapper/luks-$uuid rd.luks.uuid=$uuid rw
 EOF
-echo " done\n"
+echo " done"
 
 read -p "Reboot now? [y/N]: " x
 if [ "$x = y" ]; then
