@@ -1,5 +1,3 @@
 # vlis
-most hardcoded installation script of Void Linux. PURELY FOR PERSONAL USE, EXTREMELY DANGEROUS AND COULD WIPE AND/OR ENCRYPT YOUR WHOLE DRIVE, but you of course can take this code and use any part of it wherever you want (I don't know why you'd want to do that...)
-
-I just don't want to make this thing private and log into github each time I'll clone this thing, so it's not private, hopefully nobody will on an accident erase and encrypt everything on their drive :)
-Sorryyyy...
+THIS IS A TEST, PLEASE DONT RUN IT, COULD WIPE AND/OR ENCRYPT A WRONG DRIVE ON YOUR MACHINE.
+I'm just planning on making a little script that would install Void Linux (for now only for my preferences, but who knows...). Right now it just encrypts the drive, make filesystems, mounts, copies the keys, installs the base system, generates fstab; once in chroot /mnt run vlischroot.sh, it will change the locales, username, groups, hostname, even configure the bootloader (limine), though I haven't tested any of this yet :)
